@@ -13,14 +13,15 @@ public class varTrack : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == false)
+		if(Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == true)
         {
-            pauseMenu.SetActive(true);
+            print("set active");
+            pauseMenu.SetActive(false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == true)
+        else if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == false)
         {
-            pauseMenu.SetActive(false);
+            pauseMenu.SetActive(true);
         }
     }
 }
